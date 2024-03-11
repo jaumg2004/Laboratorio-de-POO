@@ -1,13 +1,11 @@
 package org.example;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
         Empresa empresa;
-        Contato[] contato = new Contato[5];
+        Contato[] contatos = new Contato[5]; // Renamed from contato to contatos
         Scanner scanner = new Scanner(System.in);
 
         String nome;
@@ -24,7 +22,7 @@ public class Main {
 
         empresa = new Empresa(CNPJ, endereco);
 
-        for(int i = 0; i<5; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println("Digite o nome de um dos contatos:");
             nome = scanner.nextLine();
             System.out.println("Digite o email de um dos contatos:");
@@ -33,11 +31,11 @@ public class Main {
             telefone = scanner.nextLine();
             System.out.println("Digite o dataNascimento de um dos contatos:");
             dataNascimento = scanner.nextLine();
-            contato[i] = new Contato(nome, email, telefone, dataNascimento);
-            empresa = new Empresa(contato[i]);
+            contatos[i] = new Contato(nome, email, telefone, dataNascimento);
         }
 
-        endereco.exibirInfos();
+        empresa.contatos = contatos;
+        empresa.exibirInfos();
 
         scanner.close();
     }
