@@ -1,5 +1,5 @@
 package org.example;
-import java.util.Scanner
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,10 +9,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Calculadora calculadora = new Calculadora();
 
-        double raio = scnner.nexDouble();
+        double raio = scanner.nextDouble();
 
-        calculadora.circurferencia(raio);
-        calculadora.volume(raio);
+        System.out.println(calculadora.circunferencia(raio));
+        System.out.println(calculadora.volume(raio));
 
     }
 }
