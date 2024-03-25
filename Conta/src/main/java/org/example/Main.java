@@ -7,7 +7,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Conta conta = new Conta();
         int cliente = 0;
-        int menu;
+        int menu = 0;
         String nome;
         String M = "";
 
